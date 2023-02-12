@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find out more about your favourite tv shows"
+    />
+    <title>TV Shows | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fanwood+Text&family=Quattrocento+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script defer type="module" src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <iconify-icon id="hamburger" icon="pajamas:hamburger"></iconify-icon>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <form class="search" role="search" id="searchForm">
+        <input
+          class="search_field"
+          id="search"
+          name="search"
+          type="search"
+          placeholder="Search tv shows by name"
+          aria-label="Search"
+        />
+      </form>
+    </header>
+
+    <main>
+      <section class="tv-shows container flex">
+        <h1>TV Shows</h1>
+        <div class="results split">
+          <div class="loader"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Copyright &copy; 2023 |
+        <a href="https://github.com/RiverMichael" target="_blank"
+          >Michael Nilsson</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
