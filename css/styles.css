@@ -23,7 +23,7 @@ img {
     width: 100%;
 }
 
-form input {
+.search input {
     background: #1E1F22;
     border: 2px solid #000000;
     border-radius: 50px;
@@ -32,12 +32,12 @@ form input {
     color: var(--clr-white);
 }
 
-input:hover {
+.search input:hover {
     box-shadow: 0px 0px 5px #706e6e;
     transition-duration: 0.25s;
 }
 
-input:focus-visible {
+.search input:focus-visible {
     background: #393b41;
     box-shadow: 0px 0px 5px #706e6e;
     outline: transparent;
@@ -133,11 +133,6 @@ p {
     line-height: 1.2em;
 }
 
-.form__wrapper {
-    display: flex;
-    gap: 1em;
-}
-
 .container {
     width: min(100% - 2em, 75em);
     margin-inline: auto;
@@ -154,7 +149,6 @@ p {
 .results {
     gap: 2.5em;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .results a {
@@ -262,12 +256,74 @@ p {
 }
 
 
+/* CONTACT PAGE */
+
+.contactform {
+    font-weight: 700;
+    gap: 2em;
+    align-items: center;
+}
+
+.contactform__wrapper {
+    gap: 0.5em;
+}
+
+.contactform__item {
+    gap: 0.2em;
+}
+
+.contactform input {
+    background: #d9dadc;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 300px;
+    font-size: 1em;
+}
+
+.contactform input:hover {
+    box-shadow: 0px 1px 5px var(--clr-white);
+    transition-duration: 0.25s;
+}
+
+.contactform input:focus-visible {
+    background: var(--clr-white);
+    box-shadow: 0px 1px 5px #706e6e;
+    outline: transparent;
+}
+
+.contactform button {
+    width: 200px;
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: rgb(106, 175, 236);
+    color: #000000;
+}
+
+.contactform button:hover {
+    background: var(--clr-header);
+    color: rgb(106, 175, 236);
+}
+
+.contactform button:active {
+    color: darkslategray;
+}
+
+.contactform-error {
+    color: rgb(172, 64, 64);
+}
+
+
 @media (min-width: 650px) {
     .split {
         flex-flow: row wrap;
     }
 
-    form input {
+    .search input {
         width: 400px;
     }
 
@@ -288,5 +344,9 @@ p {
 
     .details > * {
         flex: 1;
+    }
+
+    .contactform input {
+        width: 400px;
     }
 }
