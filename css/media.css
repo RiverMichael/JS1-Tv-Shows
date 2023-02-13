@@ -1,0 +1,32 @@
+@media (min-width: 650px) {
+    .split {
+        flex-flow: row wrap;
+    }
+
+    .search input {
+        width: 400px;
+    }
+
+    nav {
+        display: flex;
+        margin-right: auto;
+        position: static;
+        padding: 0;
+    }
+
+    nav, .details {
+        flex-direction: row;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .details > * {
+        flex: 1;
+    }
+
+    .contactform__item {
+        width: 400px;
+    }
+}
