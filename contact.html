@@ -38,12 +38,14 @@
         <form class="contactform flex" id="contactform">
           <div class="contactform__wrapper flex">
             <div class="contactform__item flex">
-              <label for="name">Name</label>
+              <label for="name"
+                >Name <span class="label-span">(required)</span></label
+              >
               <input
                 type="text"
                 class="name"
                 id="name"
-                placeholder="required"
+                placeholder="Hank Moody"
               />
               <div class="contactform-error" id="name-error">
                 Please enter your name
@@ -51,12 +53,17 @@
             </div>
 
             <div class="contactform__item flex">
-              <label for="subject">Subject</label>
+              <label for="subject"
+                >Subject
+                <span class="label-span"
+                  >(min length of 10 characters)</span
+                ></label
+              >
               <input
                 type="text"
                 class="subject"
                 id="subject"
-                placeholder="minimum length of 10 characters"
+                placeholder="Please add my favourite show"
               />
               <div class="contactform-error" id="subject-error">
                 Subject must have a minimum length of 10 characters
@@ -77,12 +84,17 @@
             </div>
 
             <div class="contactform__item flex">
-              <label for="adress">Adress</label>
+              <label for="adress"
+                >Adress
+                <span class="label-span"
+                  >(min length of 25 characters)</span
+                ></label
+              >
               <input
                 type="text"
                 class="adress"
                 id="adress"
-                placeholder="minimum length of 25 characters"
+                placeholder="Lake street 1, 90210 Beverly Hills"
               />
               <div class="contactform-error" id="adress-error">
                 Adress must have a minimum length of 25 characters

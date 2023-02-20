@@ -136,17 +136,15 @@ p {
 }
 
 .error {
-    background: rgb(172, 64, 64, 0.1);
-    color: rgb(172, 64, 64);
+    color: var(--clr-error);
     padding: 2em;
-    border: 1px solid rgb(172, 64, 64);
+    border: 1px solid var(--clr-error);
 }
 
 .success {
-    background: rgb(64, 172, 64, 0.1);
-    color: rgb(64, 172, 64);
+    color: var(--clr-success);
     padding: 2em;
-    border: 1px solid rgb(64, 172, 64);
+    border: 1px solid var(--clr-success);
 }
 
 .loader {

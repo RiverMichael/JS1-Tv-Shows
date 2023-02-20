@@ -5,6 +5,11 @@
     align-items: center;
 }
 
+.label-span {
+    font-size: 0.8rem;
+    color: #bcbaba;
+}
+
 .contactform__wrapper {
     gap: 0.5em;
 }
@@ -60,6 +65,6 @@
 }
 
 .contactform-error {
-    color: rgb(172, 64, 64);
+    color: var(--clr-error);
     display: none;
 }

@@ -35,7 +35,7 @@ export function createDetailsHtml(parentElement, show) {
 
     parentElement.innerHTML = `<h1>${show.name}</h1>
                                 <div class="details flex">
-                                    <img src="${show.image.medium}" alt"${show.name}">
+                                    <img src="${show.image.medium}" alt="${show.name}">
                                     <div class="details__wrapper flex">
                                         <div class="details-info flex">
                                             <h2>Details</h2>
