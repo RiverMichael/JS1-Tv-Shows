@@ -23,7 +23,6 @@
     border: 2px solid #000000;
     border-radius: 5px;
     padding: 0.5em;
-    /* width: 300px; */
     font-size: 1em;
 }
 
@@ -51,6 +50,7 @@
 }
 
 .contactform button:hover {
+    cursor: pointer;
     background: var(--clr-header);
     color: rgb(106, 175, 236);
 }
@@ -61,4 +61,5 @@
 
 .contactform-error {
     color: rgb(172, 64, 64);
+    display: none;
 }

@@ -3,7 +3,6 @@ import { clearHtml } from "./createHtml.js";
 import { createMessage } from "./createMessage.js";
 
 export function onSearch(value, parentElement, detailList) {
-
     const filteredShowsList = filterListOnSearch(detailList, value);
 
     if (filteredShowsList.length) {
@@ -14,7 +13,6 @@ export function onSearch(value, parentElement, detailList) {
         createMessage(parentElement, "error", "No show found by the search");
     };
 };
-
 
 function filterListOnSearch(details, term) {
     return details.filter(function(detail) {

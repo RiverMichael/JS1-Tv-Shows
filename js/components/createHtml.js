@@ -1,5 +1,4 @@
 export function createListHtml(parentElement, show) {
-
     let showRating = "-";
     if (show.rating.average) {
         showRating = show.rating.average;
@@ -19,7 +18,6 @@ export function createListHtml(parentElement, show) {
 };
 
 export function createDetailsHtml(parentElement, show) {
-
     let showStatus = "Still running";
     if (show.ended) {
         showStatus = show.ended;

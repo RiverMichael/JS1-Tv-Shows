@@ -3,18 +3,16 @@ import { createMessage } from "./components/createMessage.js";
 import { renderShows } from "./components/render.js";
 import { clearHtml } from "./components/createHtml.js";
 import { setSearchListeners } from "./components/setSearchListeners.js";
-// import { clearDetailList } from "./components/createHtml.js";
-// import { saveToStorage } from "./storage/local.js";
-// import { showKey } from "./components/searchKeys.js";
 
 const resultsContainer = document.querySelector(".results");
+const hamburgerMenu = document.querySelector("#hamburger");
+
+hamburgerMenu.addEventListener("click", toggleNavigation);
 
 const url = "https://api.tvmaze.com/shows";
 
 async function getShows() {
-
     try {
-        
         const response = await fetch(url);
         const results = await response.json();
 
@@ -28,6 +26,3 @@ async function getShows() {
     };
 };
 getShows();
-
-const hamburgerMenu = document.querySelector("#hamburger");
-hamburgerMenu.addEventListener("click", toggleNavigation);
