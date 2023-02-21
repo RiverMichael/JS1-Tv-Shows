@@ -1,5 +1,4 @@
 import { createMessage } from "./components/createMessage.js";
-import { toggleNavigation } from "./components/toggleNavigation.js";
 
 const form = document.querySelector("#contactform");
 const email = document.querySelector("#email");
@@ -11,9 +10,7 @@ const subjectError = document.querySelector("#subject-error");
 const adress = document.querySelector("#adress");
 const adressError = document.querySelector("#adress-error");
 const messageContainer = document.querySelector(".message");
-const hamburgerMenu = document.querySelector("#hamburger");
 
-hamburgerMenu.addEventListener("click", toggleNavigation);
 form.addEventListener("submit", validateForm);
 
 function validateForm(event) {

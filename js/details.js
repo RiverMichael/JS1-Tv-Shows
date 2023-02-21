@@ -1,11 +1,7 @@
-import { toggleNavigation } from "./components/toggleNavigation.js";
 import { clearHtml, createDetailsHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 
 const detailsContainer = document.querySelector(".container");
-const hamburgerMenu = document.querySelector("#hamburger");
-
-hamburgerMenu.addEventListener("click", toggleNavigation);
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
