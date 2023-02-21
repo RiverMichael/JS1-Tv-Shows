@@ -39,14 +39,14 @@ export function createDetailsHtml(parentElement, show) {
                                     <div class="details__wrapper flex">
                                         <div class="details-info flex">
                                             <h2>Details</h2>
-                                            <div class="details-info__content flex">
-                                                <p>Rating: ${showRating}</p>
-                                                <p>Premiered: ${show.premiered}</p>
-                                                <p>Ended: ${showStatus}</p>
-                                                <p>Language: ${show.language}</p>
-                                                <p>Average runtime: ${show.averageRuntime} min</p>
-                                                <p>Network: ${showNetwork}</p>
-                                            </div>
+                                            <ul class="details-list flex">
+                                                <li><strong>Rating:</strong> ${showRating}</li>
+                                                <li><strong>Premiered:</strong> ${show.premiered}</li>
+                                                <li><strong>Ended:</strong> ${showStatus}</li>
+                                                <li><strong>Language:</strong> ${show.language}</li>
+                                                <li><strong>Average runtime:</strong> ${show.averageRuntime} min</li>
+                                                <li><strong>Network:</strong> ${showNetwork}</li>
+                                            </ul>
                                         </div>
                                         <div class="summary flex">
                                             <h2>Summary</h2>

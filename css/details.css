@@ -1,6 +1,6 @@
 /* DETAILS PAGE */
 .breadcrumb-nav, .details {
-    padding: 2em;
+    padding: 30px;
 }
 
 .breadcrumb-nav a {
@@ -9,7 +9,7 @@
 
 .details {
     width: min(100% - 2em, 60em);
-    gap: 2.5em;
+    gap: 40px;
     align-items: flex-start;
 }
 
@@ -19,13 +19,21 @@
 }
 
 .details__wrapper {
-    gap: 2em;
+    gap: 30px;
 }
 
 .details-info, .summary {
-    gap: 1em;
+    gap: 20px;
 }
 
-.details-info__content {
-    gap: 0.5em;
+.details-list {
+    gap: 10px;
+}
+
+li {
+    display: block;
+}
+
+li strong {
+    color: rgb(129 141 152);
 }

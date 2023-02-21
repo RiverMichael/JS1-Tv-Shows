@@ -3,7 +3,7 @@
         flex-flow: row wrap;
     }
 
-    .search input {
+    .search input, .contactform__item {
         width: 400px;
     }
 
@@ -24,9 +24,5 @@
 
     .details > * {
         flex: 1;
-    }
-
-    .contactform__item {
-        width: 400px;
     }
 }

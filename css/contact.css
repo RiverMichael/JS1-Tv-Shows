@@ -1,7 +1,7 @@
 /* CONTACT PAGE */
 .contactform {
     font-weight: 700;
-    gap: 2em;
+    gap: 30px;
     align-items: center;
 }
 
@@ -11,15 +11,11 @@
 }
 
 .contactform__wrapper {
-    gap: 0.5em;
-}
-
-.contactform__wrapper > * {
-    flex: 1;
+    gap: 10px;
 }
 
 .contactform__item {
-    gap: 0.2em;
+    gap: 2px;
     width: 300px;
 }
 
@@ -27,41 +23,43 @@
     background: #d9dadc;
     border: 2px solid #000000;
     border-radius: 5px;
-    padding: 0.5em;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
-.contactform input:hover {
-    box-shadow: 0px 1px 5px var(--clr-white);
-    transition-duration: 0.25s;
+.contactform input, .contactform button {
+    padding: 10px;
+}
+
+.contactform input:hover, .contactform input:focus-visible {
+    box-shadow: 0px 1px 5px rgb(193, 220, 254);
 }
 
 .contactform input:focus-visible {
     background: var(--clr-white);
-    box-shadow: 0px 1px 5px #706e6e;
     outline: transparent;
 }
 
 .contactform button {
     width: 200px;
-    padding: 0.5em;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     border: 2px solid transparent;
     border-radius: 5px;
-    background: rgb(106, 175, 236);
+    background: var(--clr-blue);
+}
+
+.contactform button, .contactform button:hover, .contactform button:active {
     color: #000000;
 }
 
 .contactform button:hover {
     cursor: pointer;
-    background: var(--clr-header);
-    color: rgb(106, 175, 236);
+    background: rgb(193, 220, 254);
 }
 
 .contactform button:active {
-    color: darkslategray;
+    background: rgb(59, 66, 75);
 }
 
 .contactform-error {
