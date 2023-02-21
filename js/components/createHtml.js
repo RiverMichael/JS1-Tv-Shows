@@ -5,16 +5,16 @@ export function createListHtml(parentElement, show) {
     };
 
     parentElement.innerHTML += `<a class="card-link" href="details.html?id=${show.id}">
-                                        <div class="card flex">
-                                            <div class="card-image" style="background-image: url(${show.image.medium})">
-                                                <div class="circle">${showRating}</div>
-                                            </div>
-                                            <div class=" card-details flex">
-                                                <h2>${show.name}</h2>
-                                                <p>${show.genres}</p>
-                                            </div>
+                                    <div class="card flex">
+                                        <div class="card-image" style="background-image: url(${show.image.medium})">
+                                            <div class="circle">${showRating}</div>
                                         </div>
-                                    </a>`;
+                                        <div class=" card-details flex">
+                                            <h2>${show.name}</h2>
+                                            <p>${show.genres}</p>
+                                        </div>
+                                    </div>
+                                </a>`;
 };
 
 export function createDetailsHtml(parentElement, show) {
