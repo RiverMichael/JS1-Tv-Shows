@@ -16,7 +16,7 @@ async function getShow() {
         document.title = show.name;
 
         clearHtml(detailsContainer);
-        createDetailsHtml(detailsContainer ,show);
+        createDetailsHtml(detailsContainer, show);
     }
     catch(error) {
         console.log(error);
