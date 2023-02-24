@@ -1,3 +1,4 @@
+import { clearHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 
 const form = document.querySelector("#contactform");
@@ -15,7 +16,7 @@ form.addEventListener("submit", validateForm);
 
 function validateForm(event) {
     event.preventDefault();
-    messageContainer.innerHTML = "";
+    clearHtml(messageContainer);
 
     if (validateLength(name.value, 1, nameError) && validateLength(subject.value, 10, subjectError) && validateEmail(email.value) && validateLength(adress.value, 25, adressError)) {
         createMessage(messageContainer, "success", "Your message has been successfully sent");
