@@ -42,16 +42,13 @@ function createShowDetailsElements(show) {
         showRating = show.rating.average;
     };
     
-    let showNetwork = "Unknown";
+    let showNetwork = "";
     if (!show.network) {
-        show.network = {
-            name: undefined,
-        };
-    }
-    if (show.network.name) {
+        showNetwork = "Unknown";
+    } else if (show.network.name) {
         showNetwork = show.network.name;
     };
-
+    
     const detailsTitle = htmlComponents.createDetailsTitle(show.name);
     const detailsImage = htmlComponents.createDetailsImage(show.image.medium, show.name);
     
