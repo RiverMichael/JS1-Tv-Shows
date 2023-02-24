@@ -18,7 +18,7 @@ function createShowsListElements(show) {
     const cardRating = htmlComponents.createCardRating(showRating);
     const cardImage = htmlComponents.createCardImage(`background-image: url(${show.image.medium})`, [cardRating]);
     const cardTitle = htmlComponents.createCardTitle(show.name);
-    const cardGenres = htmlComponents.createCardGenres(show.genres);
+    const cardGenres = htmlComponents.createCardGenres(show.genres.join(" / "));
     const cardDetails = htmlComponents.createCardDetails([cardTitle, cardGenres]);
     const card = htmlComponents.createCardElement([cardImage, cardDetails]);
     const cardLink = htmlComponents.createCardLink([card], `details.html?id=${show.id}`);
@@ -45,7 +45,7 @@ function createShowDetailsElements(show) {
     let showNetwork = "Unknown";
     if (show.network.name) {
         showNetwork = show.network.name;
-    };
+    }
 
     const detailsTitle = htmlComponents.createDetailsTitle(show.name);
     const detailsImage = htmlComponents.createDetailsImage(show.image.medium, show.name);
