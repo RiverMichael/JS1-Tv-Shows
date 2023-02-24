@@ -129,12 +129,14 @@ p {
     color: var(--clr-error);
     padding: 30px;
     border: 1px solid var(--clr-error);
+    margin-block: 50px;
 }
 
 .success {
     color: var(--clr-success);
     padding: 30px;
     border: 1px solid var(--clr-success);
+    margin-block: 50px;
 }
 
 .loader {

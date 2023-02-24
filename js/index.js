@@ -1,8 +1,7 @@
-
-import { createMessage } from "./components/createMessage.js";
-import { renderShows } from "./components/render.js";
 import { clearHtml } from "./components/createHtml.js";
+import { renderShows } from "./components/render.js";
 import { setSearchListeners } from "./components/setSearchListeners.js";
+import { createMessage } from "./components/createMessage.js";
 
 const resultsContainer = document.querySelector(".results");
 

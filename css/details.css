@@ -1,5 +1,5 @@
 /* DETAILS PAGE */
-.breadcrumb-nav, .details {
+.breadcrumb-nav, .details__content {
     padding: 30px;
 }
 
@@ -8,32 +8,39 @@
 }
 
 .details {
+    align-items: center;
+}
+
+.details__content {
     width: min(100% - 2em, 60em);
     gap: 40px;
     align-items: flex-start;
 }
 
-.details img {
+.details__content img {
     box-shadow: 0px 4px 10px #000000;
     border-radius: 5px;
 }
 
-.details__wrapper {
+.details-info {
     gap: 30px;
 }
 
-.details-info, .summary {
+.details-specs, .details-summary {
     gap: 20px;
 }
 
-.details-list {
+.details-specs__list {
     gap: 10px;
 }
 
 li {
     display: block;
+    color: rgb(129 141 152);
+    font-weight: 700;
 }
 
-li strong {
-    color: rgb(129 141 152);
+li span {
+    color: var(--clr-white);
+    font-weight: 400;
 }

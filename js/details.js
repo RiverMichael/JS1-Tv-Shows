@@ -1,7 +1,7 @@
-import { clearHtml, createDetailsHtml } from "./components/createHtml.js";
+import { clearHtml, createShowDetailsHtml } from "./components/createHtml.js";
 import { createMessage } from "./components/createMessage.js";
 
-const detailsContainer = document.querySelector(".container");
+const detailsContainer = document.querySelector(".details");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -16,7 +16,7 @@ async function getShow() {
         document.title = show.name;
 
         clearHtml(detailsContainer);
-        createDetailsHtml(detailsContainer, show);
+        createShowDetailsHtml(show, detailsContainer);
     }
     catch(error) {
         console.log(error);

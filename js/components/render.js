@@ -1,7 +1,7 @@
-import { createListHtml } from "./createHtml.js";
+import { createShowsListHtml } from "./createHtml.js";
 
 export function renderShows(results, parentElement) {
     results.forEach(shows => {
-        createListHtml(parentElement, shows);
+        createShowsListHtml(shows, parentElement);
     });
 };

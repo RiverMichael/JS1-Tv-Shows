@@ -1,5 +1,5 @@
-import { renderShows } from "./render.js";
 import { clearHtml } from "./createHtml.js";
+import { renderShows } from "./render.js";
 import { createMessage } from "./createMessage.js";
 
 export function onSearch(value, parentElement, detailList) {

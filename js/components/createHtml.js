@@ -1,23 +1,37 @@
-export function createListHtml(parentElement, show) {
+import htmlComponents from "./htmlComponents.js";
+
+export function clearHtml(parentElement) {
+    parentElement.innerHTML = "";
+};
+
+export function createShowsListHtml(show, parentElement) {
+    const listHtml = createShowsListElements(show);
+    parentElement.append(listHtml); 
+};
+
+function createShowsListElements(show) {
     let showRating = "-";
     if (show.rating.average) {
         showRating = show.rating.average;
     };
 
-    parentElement.innerHTML += `<a class="card-link" href="details.html?id=${show.id}">
-                                    <div class="card flex">
-                                        <div class="card-image" style="background-image: url(${show.image.medium})">
-                                            <div class="circle">${showRating}</div>
-                                        </div>
-                                        <div class=" card-details flex">
-                                            <h2>${show.name}</h2>
-                                            <p>${show.genres}</p>
-                                        </div>
-                                    </div>
-                                </a>`;
+    const cardRating = htmlComponents.createCardRating(showRating);
+    const cardImage = htmlComponents.createCardImage(`background-image: url(${show.image.medium})`, [cardRating]);
+    const cardTitle = htmlComponents.createCardTitle(show.name);
+    const cardGenres = htmlComponents.createCardGenres(show.genres);
+    const cardDetails = htmlComponents.createCardDetails([cardTitle, cardGenres]);
+    const card = htmlComponents.createCardElement([cardImage, cardDetails]);
+    const cardLink = htmlComponents.createCardLink([card], `details.html?id=${show.id}`);
+
+    return cardLink;
 };
 
-export function createDetailsHtml(parentElement, show) {
+export function createShowDetailsHtml(show, parentElement) {
+    const detailsHtml = createShowDetailsElements(show);
+    parentElement.append(detailsHtml);
+};
+
+function createShowDetailsElements(show) {
     let showStatus = "Still running";
     if (show.ended) {
         showStatus = show.ended;
@@ -33,29 +47,51 @@ export function createDetailsHtml(parentElement, show) {
         showNetwork = show.network.name;
     };
 
-    parentElement.innerHTML = `<h1>${show.name}</h1>
-                                <div class="details flex">
-                                    <img src="${show.image.medium}" alt="${show.name}">
-                                    <div class="details__wrapper flex">
-                                        <div class="details-info flex">
-                                            <h2>Details</h2>
-                                            <ul class="details-list flex">
-                                                <li><strong>Rating:</strong> ${showRating}</li>
-                                                <li><strong>Premiered:</strong> ${show.premiered}</li>
-                                                <li><strong>Ended:</strong> ${showStatus}</li>
-                                                <li><strong>Language:</strong> ${show.language}</li>
-                                                <li><strong>Average runtime:</strong> ${show.averageRuntime} min</li>
-                                                <li><strong>Network:</strong> ${showNetwork}</li>
-                                            </ul>
-                                        </div>
-                                        <div class="summary flex">
-                                            <h2>Summary</h2>
-                                            <article class="summary__content">${show.summary}</article>
-                                        </div>
-                                    </div>
-                                </div>`;
-};
+    const detailsTitle = htmlComponents.createDetailsTitle(show.name);
+    const detailsImage = htmlComponents.createDetailsImage(show.image.medium, show.name);
+    
+    const detailsHeading = htmlComponents.createHeading("Details");
 
-export function clearHtml(parentElement) {
-    parentElement.innerHTML = "";
+    const detailsRating = htmlComponents.createDetailsLi("Rating: ");
+    const detailsRatingSpan = htmlComponents.createListSpan(showRating);
+    detailsRating.appendChild(detailsRatingSpan);
+
+    const detailsPremiered = htmlComponents.createDetailsLi("Premiered: ");
+    const detailsPremieredSpan = htmlComponents.createListSpan(show.premiered);
+    detailsPremiered.appendChild(detailsPremieredSpan);
+
+    const detailsEnded = htmlComponents.createDetailsLi("Ended: ");
+    const detailsEndedSpan = htmlComponents.createListSpan(showStatus);
+    detailsEnded.appendChild(detailsEndedSpan);
+
+    const detailsLanguage = htmlComponents.createDetailsLi("Language: ");
+    const detailsLanguageSpan = htmlComponents.createListSpan(show.language);
+    detailsLanguage.appendChild(detailsLanguageSpan);
+    
+    const detailsRuntime = htmlComponents.createDetailsLi("Average runtime: ");
+    const detailsRuntimeSpan = htmlComponents.createListSpan(`${show.averageRuntime} min`);
+    detailsRuntime.appendChild(detailsRuntimeSpan);
+
+    const detailsNetwork = htmlComponents.createDetailsLi("Network: ");
+    const detailsNetworkSpan = htmlComponents.createListSpan(showNetwork);
+    detailsNetwork.appendChild(detailsNetworkSpan);
+
+    const detailsUl = htmlComponents.createDetailsUl([detailsRating, detailsPremiered, detailsEnded, detailsLanguage, detailsRuntime, detailsNetwork]);
+
+    const detailsSpecs = htmlComponents.createDetailsSpecs([detailsHeading, detailsUl]);
+   
+    const summaryHeading = htmlComponents.createHeading("Summary");
+
+    const unStrippedSummary = show.summary.replaceAll(/<\/?[^>]+(>|$)/gi, "");
+    // Ref: https://linuxhint.com/strip-html-tags-from-string-javascript/
+    
+    const summaryArticle = htmlComponents.createSummaryArticle(unStrippedSummary);
+    const summary = htmlComponents.createSummary([summaryHeading, summaryArticle]);
+
+    const detailsInfo = htmlComponents.createDetailsInfo([detailsSpecs, summary]);
+
+    const detailsContent = htmlComponents.createDetailsContent([detailsImage, detailsInfo]);
+    const detailsWrapper = htmlComponents.createDetailsWrapper([detailsTitle, detailsContent]);
+
+    return detailsWrapper;
 };
