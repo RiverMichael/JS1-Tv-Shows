@@ -15,33 +15,33 @@ const messageContainer = document.querySelector(".message");
 form.addEventListener("submit", validateForm);
 
 function validateForm(event) {
-    event.preventDefault();
-    clearHtml(messageContainer);
+  event.preventDefault();
+  clearHtml(messageContainer);
 
-    if (validateLength(name.value, 1, nameError) && validateLength(subject.value, 10, subjectError) && validateEmail(email.value) && validateLength(adress.value, 25, adressError)) {
-        createMessage(messageContainer, "success", "Your message has been successfully sent");
-        form.reset();
-    }
-};
+  if (validateLength(name.value, 1, nameError) && validateLength(subject.value, 10, subjectError) && validateEmail(email.value) && validateLength(adress.value, 25, adressError)) {
+    createMessage(messageContainer, "success", "Your message has been successfully sent");
+    form.reset();
+  }
+}
 
 function validateEmail(email) {
-    const regEx = /\S+@\S+\.\S+/;
-    const result = regEx.test(email);
-   
-    if (result) {
-        emailError.style.display = "none";
-    } else {
-        emailError.style.display = "block";
-    }
-    return result
-};
+  const regEx = /\S+@\S+\.\S+/;
+  const result = regEx.test(email);
+
+  if (result) {
+    emailError.style.display = "none";
+  } else {
+    emailError.style.display = "block";
+  }
+  return result;
+}
 
 function validateLength(value, length, errorMessage) {
-    if (value.trim().length >= length) {
-        errorMessage.style.display = "none";
-        return true;
-    } else {
-        errorMessage.style.display = "block";
-        return false;
-    }; 
-};
+  if (value.trim().length >= length) {
+    errorMessage.style.display = "none";
+    return true;
+  } else {
+    errorMessage.style.display = "block";
+    return false;
+  }
+}

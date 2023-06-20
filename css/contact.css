@@ -1,68 +1,72 @@
 /* CONTACT PAGE */
 .contactform {
-    font-weight: 700;
-    gap: 30px;
-    align-items: center;
+  font-weight: 700;
+  gap: 30px;
+  align-items: center;
 }
 
 .label-span {
-    font-size: 0.8rem;
-    color: #bcbaba;
+  font-size: 0.8rem;
+  color: #bcbaba;
 }
 
 .contactform__wrapper {
-    gap: 10px;
+  gap: 10px;
 }
 
 .contactform__item {
-    gap: 2px;
-    width: 300px;
+  gap: 2px;
+  width: 300px;
 }
 
 .contactform input {
-    background: #d9dadc;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    font-size: 1rem;
+  background: #d9dadc;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-.contactform input, .contactform button {
-    padding: 10px;
+.contactform input,
+.contactform button {
+  padding: 10px;
 }
 
-.contactform input:hover, .contactform input:focus-visible {
-    box-shadow: 0px 1px 5px rgb(193, 220, 254);
+.contactform input:hover,
+.contactform input:focus-visible {
+  box-shadow: 0px 1px 5px rgb(193, 220, 254);
 }
 
 .contactform input:focus-visible {
-    background: var(--clr-white);
-    outline: transparent;
+  background: var(--clr-white);
+  outline: transparent;
 }
 
 .contactform button {
-    width: 200px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background: var(--clr-blue);
+  width: 200px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background: var(--clr-blue);
 }
 
-.contactform button, .contactform button:hover, .contactform button:active {
-    color: #000000;
+.contactform button,
+.contactform button:hover,
+.contactform button:active {
+  color: #000000;
 }
 
 .contactform button:hover {
-    cursor: pointer;
-    background: rgb(193, 220, 254);
+  cursor: pointer;
+  background: rgb(193, 220, 254);
 }
 
 .contactform button:active {
-    background: rgb(59, 66, 75);
+  background: rgb(59, 66, 75);
 }
 
 .contactform-error {
-    color: var(--clr-error);
-    display: none;
+  color: var(--clr-error);
+  display: none;
 }

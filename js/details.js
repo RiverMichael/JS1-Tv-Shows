@@ -9,18 +9,17 @@ const id = params.get("id");
 const url = "https://api.tvmaze.com/shows/" + id;
 
 async function getShow() {
-    try {
-        const response = await fetch(url);
-        const show = await response.json();
+  try {
+    const response = await fetch(url);
+    const show = await response.json();
 
-        document.title = show.name;
+    document.title = show.name;
 
-        clearHtml(detailsContainer);
-        createShowDetailsHtml(show, detailsContainer);
-    }
-    catch(error) {
-        console.log(error);
-        createMessage(detailsContainer, "error", "There was an error while loading this page, please try again.");
-    };
-};
+    clearHtml(detailsContainer);
+    createShowDetailsHtml(show, detailsContainer);
+  } catch (error) {
+    console.log(error);
+    createMessage(detailsContainer, "error", "There was an error while loading this page, please try again.");
+  }
+}
 getShow();

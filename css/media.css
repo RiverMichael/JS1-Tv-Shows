@@ -1,28 +1,30 @@
 @media (min-width: 650px) {
-    .split {
-        flex-flow: row wrap;
-    }
+  .split {
+    flex-flow: row wrap;
+  }
 
-    .search input, .contactform__item {
-        width: 400px;
-    }
+  .search input,
+  .contactform__item {
+    width: 400px;
+  }
 
-    nav {
-        display: flex;
-        margin-right: auto;
-        position: static;
-        padding: 0;
-    }
+  nav {
+    display: flex;
+    margin-right: auto;
+    position: static;
+    padding: 0;
+  }
 
-    nav, .details__content {
-        flex-direction: row;
-    }
+  nav,
+  .details__content {
+    flex-direction: row;
+  }
 
-    #hamburger {
-        display: none;
-    }
+  #hamburger {
+    display: none;
+  }
 
-    .details__content > * {
-        flex: 1;
-    }
+  .details__content > * {
+    flex: 1;
+  }
 }

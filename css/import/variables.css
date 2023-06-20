@@ -1,11 +1,11 @@
 :root {
-    --ff-heading: "Quattrocento Sans", sans-serif;
-    --ff-body: "Fanwood Tex", sans-serif;
+  --ff-heading: "Quattrocento Sans", sans-serif;
+  --ff-body: "Fanwood Tex", sans-serif;
 
-    --clr-white: #FDFDFD;
-    --clr-blue: rgb(91 135 191);
-    --clr-error: rgb(245 74 74);
-    --clr-success: rgb(103 208 103);
-    --clr-header: linear-gradient(180deg, #101012 0%, #101112 51.56%, #101012 100%);
-    --clr-background: #1E1F22; 
+  --clr-white: #fdfdfd;
+  --clr-blue: rgb(91 135 191);
+  --clr-error: rgb(245 74 74);
+  --clr-success: rgb(103 208 103);
+  --clr-header: linear-gradient(180deg, #101012 0%, #101112 51.56%, #101012 100%);
+  --clr-background: #1e1f22;
 }

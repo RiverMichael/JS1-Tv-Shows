@@ -4,21 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Contact us about your favourite tv show."
-    />
+    <meta name="description" content="Contact us about your favourite tv show." />
+
     <title>TV Shows | Contact</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fanwood+Text&family=Quattrocento+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/media.css" />
     <link rel="icon" href="data:;base64,=" />
+
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script defer src="js/components/toggleNavigation.js"></script>
     <script defer type="module" src="js/contact.js"></script>
@@ -39,67 +36,27 @@
         <form class="contactform flex" id="contactform">
           <div class="contactform__wrapper flex">
             <div class="contactform__item flex">
-              <label for="name"
-                >Name <span class="label-span">(required)</span></label
-              >
-              <input
-                type="text"
-                class="name"
-                id="name"
-                placeholder="Hank Moody"
-              />
-              <div class="contactform-error" id="name-error">
-                Please enter your name
-              </div>
+              <label for="name">Name <span class="label-span">(required)</span></label>
+              <input type="text" class="name" id="name" placeholder="Hank Moody" />
+              <div class="contactform-error" id="name-error">Please enter your name</div>
             </div>
 
             <div class="contactform__item flex">
-              <label for="subject"
-                >Subject
-                <span class="label-span"
-                  >(min length of 10 characters)</span
-                ></label
-              >
-              <input
-                type="text"
-                class="subject"
-                id="subject"
-                placeholder="Please add my favourite show"
-              />
-              <div class="contactform-error" id="subject-error">
-                Subject must have a minimum length of 10 characters
-              </div>
+              <label for="subject">Subject <span class="label-span">(min length of 10 characters)</span></label>
+              <input type="text" class="subject" id="subject" placeholder="Please add my favourite show" />
+              <div class="contactform-error" id="subject-error">Subject must have a minimum length of 10 characters</div>
             </div>
 
             <div class="contactform__item flex">
               <label for="email">Email</label>
-              <input
-                type="email"
-                class="email"
-                id="email"
-                placeholder="tv@shows.com"
-              />
-              <div class="contactform-error" id="email-error">
-                Please enter a valid email adress
-              </div>
+              <input type="email" class="email" id="email" placeholder="tv@shows.com" />
+              <div class="contactform-error" id="email-error">Please enter a valid email adress</div>
             </div>
 
             <div class="contactform__item flex">
-              <label for="adress"
-                >Adress
-                <span class="label-span"
-                  >(min length of 25 characters)</span
-                ></label
-              >
-              <input
-                type="text"
-                class="adress"
-                id="adress"
-                placeholder="26 Brooks Ave, Venice, CA 90291"
-              />
-              <div class="contactform-error" id="adress-error">
-                Adress must have a minimum length of 25 characters
-              </div>
+              <label for="adress">Adress <span class="label-span">(min length of 25 characters)</span></label>
+              <input type="text" class="adress" id="adress" placeholder="26 Brooks Ave, Venice, CA 90291" />
+              <div class="contactform-error" id="adress-error">Adress must have a minimum length of 25 characters</div>
             </div>
           </div>
           <button>Submit</button>

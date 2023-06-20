@@ -1,160 +1,166 @@
 @import "./import/variables.css";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html:focus-within {
-    scroll-behavior: smooth;
-} 
+  scroll-behavior: smooth;
+}
 
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    color: var(--clr-white);
-    background: var(--clr-background);
-    font-family: var(--ff-body);
-    min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--clr-white);
+  background: var(--clr-background);
+  font-family: var(--ff-body);
+  min-height: 100vh;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
-header, footer {
-    background: var(--clr-header);
+header,
+footer {
+  background: var(--clr-header);
 }
 
 header {
-    display: flex;
-    align-items: center;
-    padding: 30px;
-    position: sticky;
-    z-index: 1000;
-    width: 100%;
-    top: 0px;
-    min-height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  position: sticky;
+  z-index: 1000;
+  width: 100%;
+  top: 0px;
+  min-height: 110px;
 }
 
 footer {
-    font-family: var(--ff-body);
-    font-size: 0.8rem;
-    padding: 15px;
-    text-align: center;
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  padding: 15px;
+  text-align: center;
 }
 
 footer a {
-    color: var(--clr-white);
+  color: var(--clr-white);
 }
 
-footer a, .active {
-    text-decoration: underline;
+footer a,
+.active {
+  text-decoration: underline;
 }
 
 #hamburger {
-    font-size: 2rem;
-    margin-right: auto;
+  font-size: 2rem;
+  margin-right: auto;
 }
 
-#hamburger, h1, h2, nav a {
-    color: var(--clr-blue);
+#hamburger,
+h1,
+h2,
+nav a {
+  color: var(--clr-blue);
 }
 
 #hamburger:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 nav {
-    display: none;
-    background: var(--clr-header);
-    gap: 30px;
-    left: 0px;
-    top: 90px;
-    z-index: 1000;
-    padding: 30px;
-    position: absolute;
-    border-radius: 0px 0px 20px 0px;
+  display: none;
+  background: var(--clr-header);
+  gap: 30px;
+  left: 0px;
+  top: 90px;
+  z-index: 1000;
+  padding: 30px;
+  position: absolute;
+  border-radius: 0px 0px 20px 0px;
 }
 
 nav a {
-    text-transform: uppercase;
-    font-family: var(--ff-heading);
-    font-size: 1rem;
-    font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--ff-heading);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .active {
-    color: rgb(78 94 108);
+  color: rgb(78 94 108);
 }
 
 h1 {
-    font-size: 3rem;
-    font-family: var(--ff-heading);
-    text-align: center;
+  font-size: 3rem;
+  font-family: var(--ff-heading);
+  text-align: center;
 }
 
 p {
-    line-height: 1.2rem;
+  line-height: 1.2rem;
 }
 
 .container {
-    width: min(100% - 30px, 1200px);
-    margin-inline: auto;
-    padding-block: 50px;
-    gap: 50px;
-    align-items: center;
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+  padding-block: 50px;
+  gap: 50px;
+  align-items: center;
 }
 
-.flex, .split {
-    display: flex;
-    flex-direction: column;
+.flex,
+.split {
+  display: flex;
+  flex-direction: column;
 }
 
 .results {
-    gap: 40px;
-    justify-content: center;
+  gap: 40px;
+  justify-content: center;
 }
 
 .results a {
-    color: var(--clr-white);
+  color: var(--clr-white);
 }
 
 .error {
-    color: var(--clr-error);
-    padding: 30px;
-    border: 1px solid var(--clr-error);
-    margin-block: 50px;
+  color: var(--clr-error);
+  padding: 30px;
+  border: 1px solid var(--clr-error);
+  margin-block: 50px;
 }
 
 .success {
-    color: var(--clr-success);
-    padding: 30px;
-    border: 1px solid var(--clr-success);
-    margin-block: 50px;
+  color: var(--clr-success);
+  padding: 30px;
+  border: 1px solid var(--clr-success);
+  margin-block: 50px;
 }
 
 .loader {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    display: inline-block;
-    border-top: 3px solid var(--clr-white);
-    border-right: 3px solid transparent;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid var(--clr-white);
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } 
+  100% {
+    transform: rotate(360deg);
+  }
+}
