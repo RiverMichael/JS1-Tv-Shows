@@ -7,14 +7,17 @@ const resultsContainer = document.querySelector(".results");
 
 const url = "https://api.tvmaze.com/shows";
 
+/**
+ * Fetches all TV shows and renders the HTML
+ */
 async function getShows() {
   try {
     const response = await fetch(url);
-    const results = await response.json();
+    const shows = await response.json();
 
     clearHtml(resultsContainer);
-    renderShows(results, resultsContainer);
-    setSearchListeners(resultsContainer, results);
+    renderShows(shows, resultsContainer);
+    setSearchListeners(resultsContainer, shows);
   } catch (error) {
     console.log(error);
     createMessage(resultsContainer, "error", "There was an error while loading this page, please try again.");

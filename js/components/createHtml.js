@@ -1,14 +1,31 @@
 import htmlComponents from "./htmlComponents.js";
 
+/**
+ * Clears the HTML of an element
+ * @param {*} parentElement The element to clear
+ * @example
+ * const container = document.querySelector(".container");
+ * clearHtml(container);
+ */
 export function clearHtml(parentElement) {
   parentElement.innerHTML = "";
 }
 
-export function createShowsListHtml(show, parentElement) {
-  const listHtml = createShowsListElements(show);
+/**
+ * Creates the HTML for all shows and appends it to an element
+ * @param {*} shows The shows to create HTML for
+ * @param {*} parentElement The element to append the HTML to
+ */
+export function createShowsListHtml(shows, parentElement) {
+  const listHtml = createShowsListElements(shows);
   parentElement.append(listHtml);
 }
 
+/**
+ * Creates the HTML elements for a show
+ * @param {*} show The show to create HTML elements for
+ * @returns The HTML elements
+ */
 function createShowsListElements(show) {
   let showRating = "-";
   if (show.rating.average) {
@@ -26,11 +43,21 @@ function createShowsListElements(show) {
   return cardLink;
 }
 
+/**
+ * Creates the HTML for a show and appends it to an element
+ * @param {*} show The show to create HTML for
+ * @param {*} parentElement The element to append the HTML to
+ */
 export function createShowDetailsHtml(show, parentElement) {
   const detailsHtml = createShowDetailsElements(show);
   parentElement.append(detailsHtml);
 }
 
+/**
+ * Creates the HTML elements for a specific show
+ * @param {*} show The show to create HTML for
+ * @returns The HTML elements
+ */
 function createShowDetailsElements(show) {
   let showStatus = "Still running";
   if (show.ended) {

@@ -14,6 +14,9 @@ const messageContainer = document.querySelector(".message");
 
 form.addEventListener("submit", validateForm);
 
+/**
+ * Validates the inputs of a form
+ */
 function validateForm(event) {
   event.preventDefault();
   clearHtml(messageContainer);
@@ -24,6 +27,11 @@ function validateForm(event) {
   }
 }
 
+/**
+ * Validates if an input is a valid email adress
+ * @param {*} email The input to validate
+ * @returns true or false
+ */
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const result = regEx.test(email);
@@ -36,6 +44,13 @@ function validateEmail(email) {
   return result;
 }
 
+/**
+ * Validates the length of an input and displays an error message if not valid
+ * @param {*} value The input to validate
+ * @param {*} length The required length
+ * @param {*} errorMessage The error message
+ * @returns true or false
+ */
 function validateLength(value, length, errorMessage) {
   if (value.trim().length >= length) {
     errorMessage.style.display = "none";

@@ -8,6 +8,9 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = "https://api.tvmaze.com/shows/" + id;
 
+/**
+ * Fetches a specific TV show and renders the HTML for that show
+ */
 async function getShow() {
   try {
     const response = await fetch(url);
